@@ -46,7 +46,7 @@ def home():
 @app.route('/url',methods=['POST','GET'])
 def index():
   if request.method.lower() == 'get':
-    return redirect(home)
+    return redirect("/")
   if request.method.lower() == 'post':
     surl = request.form.get('url')
     url = twdownload(surl)
